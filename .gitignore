@@ -20,3 +20,5 @@ env/
 .ipynb_checkpoints/
 
 /materials
+
+CLAUDE.md

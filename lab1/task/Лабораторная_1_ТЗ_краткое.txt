@@ -1,0 +1,135 @@
+ЛАБОРАТОРНАЯ РАБОТА №1
+LINEAR REGRESSION И LOGISTIC REGRESSION
+
+ОБЩИЕ ТРЕБОВАНИЯ
+
+Все основные элементы лабораторной должны быть реализованы самостоятельно.
+Нельзя использовать готовые реализации моделей, split, scaler, imputer и аналогичные готовые ML-компоненты из sklearn.
+Разрешено использовать NumPy, Pandas, Matplotlib и sklearn.metrics для проверки/подсчёта метрик.
+
+
+ЧАСТЬ A. LINEAR REGRESSION
+
+
+Датасет:
+Bike Sharing Dataset — Washington D.C.
+https://www.kaggle.com/datasets/marklvl/bike-sharing-dataset
+
+Файл:
+day.csv
+
+Target:
+cnt
+
+Обязательно удалить из признаков:
+casual
+registered
+
+Причина:
+cnt = casual + registered
+
+ТРЕБУЕТСЯ:
+
+1. Загрузить и кратко исследовать датасет.
+2. Сформировать X и y.
+3. Выполнить необходимую очистку и preprocessing.
+4. Самостоятельно выполнить train/test split.
+5. Реализовать собственный класс Linear Regression.
+6. Реализовать обучение градиентным спуском.
+7. Реализовать методы:
+   - __init__
+   - fit
+   - predict
+8. Сохранять историю loss во время обучения.
+9. Построить график loss по эпохам.
+10. Оценить модель по:
+   - MAE
+   - RMSE
+   - R²
+11. Реализовать простой baseline и сравнить с ним модель.
+12. Сделать вывод по результатам.
+
+
+ЧАСТЬ B. LOGISTIC REGRESSION
+
+
+Датасет:
+Spaceship Titanic
+https://www.kaggle.com/competitions/spaceship-titanic
+
+Файл:
+train.csv
+
+Target:
+Transported
+
+Competition test.csv для локальной оценки не использовать.
+Размеченный train.csv необходимо самостоятельно разделить на train/test.
+
+ТРЕБУЕТСЯ:
+
+1. Загрузить и кратко исследовать датасет.
+2. Сформировать X и y.
+3. Обработать пропуски и категориальные признаки.
+4. Выполнить необходимый preprocessing.
+5. Самостоятельно выполнить train/test split.
+6. Реализовать собственный класс Logistic Regression.
+7. Реализовать методы:
+   - __init__
+   - fit
+   - predict_proba
+   - predict
+8. Реализовать обучение градиентным спуском.
+9. Использовать BCE / LogLoss как функцию потерь.
+10. Сохранять историю loss.
+11. Построить график loss по эпохам.
+12. Оценить модель по:
+   - Accuracy
+   - Precision
+   - Recall
+   - F1
+   - LogLoss
+13. Вывести confusion matrix или TP / FP / FN / TN.
+14. Реализовать majority baseline и сравнить с ним модель.
+15. Сделать вывод по результатам.
+
+
+ЧТО НУЖНО СДАТЬ:
+
+
+1. Ноутбук с полностью воспроизводимым кодом.
+2. Собственные реализации обеих моделей.
+3. Preprocessing и split.
+4. Графики обучения.
+5. Итоговые метрики.
+6. Краткий отчёт с описанием подхода и выводами.
+
+
+ПРИМЕРНЫЕ ВОПРОСЫ НА ЗАЩИТЕ
+
+
+1. Что является X и y?
+2. Что происходит внутри fit()?
+3. Что делает predict()?
+4. Что такое loss?
+5. Как работает gradient descent?
+6. Что такое learning rate?
+7. Как обновляются веса?
+8. Зачем нужен train/test split?
+9. Что такое data leakage?
+10. Почему preprocessing нельзя обучать на test?
+11. Почему casual и registered нельзя использовать в Linear Regression?
+12. Чем MAE отличается от RMSE?
+13. Что означает R²?
+14. Что делает sigmoid?
+15. Чем predict_proba отличается от predict?
+16. Что такое threshold?
+17. Почему для Logistic Regression используется BCE?
+18. Что такое TP / FP / FN / TN?
+19. Чем Precision отличается от Recall?
+20. Что такое F1?
+21. Почему Accuracy не всегда достаточно?
+22. Что такое baseline?
+23. Где в вашем коде считается gradient?
+24. Где обновляются веса?
+25. Что бы вы улучшили в своей модели?
