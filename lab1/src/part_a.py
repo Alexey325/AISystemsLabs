@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -6,8 +8,10 @@ from linear_regression import LinearRegression
 from metrics import mae, r2, rmse
 from preprocessing import Preprocessor, train_test_split_own
 
-DATA_PATH = "../data/bike_sharing/day.csv"
-PLOT_PATH = "../pic/loss.png"
+LAB_DIR = Path(__file__).resolve().parent.parent  # папка lab1
+
+DATA_PATH = LAB_DIR / "data/bike_sharing/day.csv"
+PLOT_PATH = LAB_DIR / "pic/loss.png"
 TARGET = "cnt"
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
