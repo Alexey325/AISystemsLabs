@@ -6,7 +6,7 @@ import pandas as pd
 
 from linear_regression import LinearRegression
 from metrics import mae, r2, rmse
-from preprocessing import Preprocessor, train_test_split_own
+from preprocessing_a import Preprocessor, train_test_split_own
 
 LAB_DIR = Path(__file__).resolve().parent.parent  # папка lab1
 
